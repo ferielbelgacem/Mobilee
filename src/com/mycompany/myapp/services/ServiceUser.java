@@ -13,7 +13,7 @@ import com.codename1.io.NetworkEvent;
 import com.codename1.io.NetworkManager;
 import com.codename1.ui.events.ActionListener;
 import com.mycompany.myapp.entities.User;
-import static com.mycompany.myapp.utils.Statics.BASE_URL3;
+import static com.mycompany.myapp.utils.Statics.BASE_URL;
 import java.io.IOException;
 import java.util.Map;
 
@@ -76,7 +76,7 @@ public class ServiceUser {
     }
 
     public User Login(String username,String password) {
-        String url =BASE_URL3 +"ap/loginMobile/"+username+"/"+password;
+        String url =BASE_URL +"ap/loginMobile/"+username+"/"+password;
         req.setUrl(url);
         req.setPost(false);
         req.addResponseListener(new ActionListener<NetworkEvent>() {

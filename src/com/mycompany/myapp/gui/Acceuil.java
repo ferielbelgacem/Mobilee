@@ -48,10 +48,11 @@ private Resources theme;
          Button btev = new Button("Gestion des evenements");
        // Button btnListTasks = new Button("List Tasks");
          //Button btc = new Button("Deconnexion");
-     
+     //   btcp.addActionListener(e-> new Gcomp().show());
                             theme = UIManager.initFirstTheme("/theme");
             Image im2 = theme.getImage("logo.png");
             ImageViewer img2 = new ImageViewer(im2);
+             
             
        // btnListTasks.addActionListener(e-> new ListTasksForm(current).show());
        // btc.addActionListener(e-> new conx().show());

@@ -16,7 +16,6 @@ import com.codename1.ui.plaf.Style;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
 import com.mycompany.myapp.entities.Session;
-import com.mycompany.myapp.entities.User;
 //import com.mycompany.myapp.entities.User;
 
 /**
@@ -24,7 +23,7 @@ import com.mycompany.myapp.entities.User;
  * @author arij_
  */
 public class EmployeHome extends Form {
-          User User=Session.getCurrentSession();
+          //User User=Session.getCurrentSession();
                       private Form current;
            private Resources themeee;
     public EmployeHome(Form p){
@@ -36,11 +35,7 @@ public class EmployeHome extends Form {
               
 
            btr.addActionListener(e->{
-           new Login(p).show();
- themeee = UIManager.initFirstTheme("/themeee");
-            //Image im = theme.getImage("im age.jpg");
-            //ImageViewer img = new ImageViewer(im);
-            Image im2 = themeee.getImage("es.png");
+          // new Login(p).show();
            });
  themeee = UIManager.initFirstTheme("/themeee");
             //Image im = theme.getImage("im age.jpg");
@@ -58,9 +53,11 @@ btnListTasks.getAllStyles().setBorder(Border.createEmpty());
 btnListTasks.getAllStyles().setTextDecoration(Style.TEXT_DECORATION_3D_SHADOW_NORTH);
 btnAddTask.getAllStyles().setBorder(Border.createEmpty());
 btnAddTask.getAllStyles().setTextDecoration(Style.TEXT_DECORATION_3D_SHADOW_NORTH);*/
-        btnAddTask.addActionListener(e -> new EspaceEmploye(current).show());
-       
-        
+     ////   btnAddTask.addActionListener(e -> new EspaceEmploye(current).show());
+       // btnListTasks.addActionListener(e -> new HomeClub2(current).show());
+            //bntemp.addActionListener(e -> new Options(current).show());
+        //     bntex.addActionListener(e -> new Gexam().show());
+              
 /*
 btr.getAllStyles().setTextDecoration(Style.TEXT_DECORATION_3D_SHADOW_NORTH);
 btr.getAllStyles().setBorder(Border.createEmpty());*/

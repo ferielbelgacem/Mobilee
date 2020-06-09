@@ -26,7 +26,7 @@ public class GestionEcole extends Form{
            private Resources themeee;
     public GestionEcole (Form p ){
      current = this; //Récupération de l'interface(Form) en cours
-        setTitle("Espace Employés");
+        setTitle("EASYCHOOL");
         setLayout(BoxLayout.y());
  
  themeee = UIManager.initFirstTheme("/themeee");
@@ -34,9 +34,11 @@ public class GestionEcole extends Form{
             //ImageViewer img = new ImageViewer(im);
             Image im2 = themeee.getImage("es.png");
             ImageViewer img2 = new ImageViewer(im2);
-     
-      final  Button btnAddTask = new Button("Espace Employés ");
-       
+        add(new Label("Bienvenue dans espace eleve"));
+      //final  Button btnAddTask = new Button("Espace Employés ");
+        final Button btnListTasks = new Button("Espace Eleves");
+        //final Button btnsup = new Button("Espace Comptabilité ");
+  
    
 
    
@@ -48,14 +50,16 @@ btnsup.getAllStyles().setTextDecoration(Style.TEXT_DECORATION_3D_SHADOW_NORTH);
 
 btnAddTask.getAllStyles().setBorder(Border.createEmpty());
 btnAddTask.getAllStyles().setTextDecoration(Style.TEXT_DECORATION_3D_SHADOW_NORTH);*/
-        btnAddTask.addActionListener(e -> new Login(current).show());
-      
-        getToolbar().addMaterialCommandToLeftBar("", FontImage.MATERIAL_ARROW_BACK
-                , e-> p.showBack());
+    //    btnAddTask.addActionListener(e -> new Login().show());
+        btnListTasks.addActionListener(e -> new Login2(current).show());
+      //  btnsup.addActionListener(e -> new LoginComp(current).show());
+       // getToolbar().addMaterialCommandToLeftBar("", FontImage.MATERIAL_ARROW_BACK
+           //     , e-> p.showBack());
              //   btnsup.addActionListener(e -> new SupprimerEmploye(current).show());
 
 
-            addAll(img2,btnAddTask);
+            addAll(img2,btnListTasks);
+            
 
     
     }
